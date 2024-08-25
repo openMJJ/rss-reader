@@ -1,7 +1,5 @@
 # 简述
 
-实时展示rss订阅最新消息[DEMO](https://chuanliu.org)
-
 ## 特性
 
 - 打包后镜像大小仅有约20MB，通过docker实现一键部署
