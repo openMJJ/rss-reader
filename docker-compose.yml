@@ -6,6 +6,6 @@ services:
     container_name: rss-reader
     restart: always
     ports:
-      - "9898:8080"
+      - "29898:8080"
     volumes:
       - "$PWD/config.json:/app/config.json"
