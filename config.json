@@ -2,25 +2,25 @@
     "values": [
         "https://linux.do/latest.rss",
         "https://rss.nodeseek.com",
-        "https://hostloc.com/forum.php?mod=rss&fid=45&auth=389ec3vtQanmEuRoghE%2FpZPWnYCPmvwWgSa7RsfjbQ%2BJpA%2F6y6eHAx%2FKqtmPOg",
+        "https://hostloc.com/forum.php?fid=45&mod=rss",
         "https://v2ex.com/feed/tab/tech.xml",
         "https://www.dalao.net/feed.htm"
     ],
-    "refresh": 5,
-    "autoUpdatePush": 7,
-    "nightStartTime": "06:30:00",
-    "nightEndTime": "19:30:00",
-
-    "keywords": ["cc","cloudcone","rn","racknerd","咸鱼","4837","jpp","hk2p"],
+    "refresh": 1,
+    "autoUpdatePush": 1,
+    "nightStartTime": "00:00:01",
+    "nightEndTime": "11:59:59",
+    "keywords": [],
     "notify" : {
         "feishu": {
             "api": ""
         },
         "telegram": {
             "api": "https://api.telegram.org/bot${token}/sendMessage",
-            "chat_id":"",
-            "token": ""
+            "chat_id":"-1002206392468",
+            "token": "6770332998:AAGCZTlAndxc-Ae_TV3Uz8vsWdlrC1b4IFA"
         }
     },
     "archives": "archives.txt"
 }
+
