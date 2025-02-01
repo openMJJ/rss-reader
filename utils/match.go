@@ -1,15 +1,22 @@
 package utils
 
 import (
+	"log"
+	"regexp"
 	"rss-reader/globals"
 	"strings"
 )
 
 func MatchStr(str string, callback func(string)) {
-	strFinal := strings.ToLower(strings.TrimSpace(str))
-	for _, v := range globals.MatchList {
-		v = strings.ToLower(strings.TrimSpace(v))
-		if strings.Contains(strFinal, v) {
+	strFinal := strings.TrimSpace(str)
+	for _, pattern := range globals.MatchList {
+		re, err := regexp.Compile(pattern)
+		if err != nil {
+			log.Printf("⚠️ Invalid regular expression: %s, error: %v", pattern, err)
+			continue
+		}
+
+		if re.MatchString(strFinal) {
 			callback(str)
 			return
 		}
