@@ -4,24 +4,26 @@ import (
 	"bufio"
 	"embed"
 	"fmt"
-	"github.com/mmcdole/gofeed"
 	"log"
 	"os"
 	"rss-reader/models"
 	"strings"
 	"sync"
 
+	"github.com/mmcdole/gofeed"
+
 	"github.com/gorilla/websocket"
 )
 
 var (
-	DbMap     map[string]models.Feed
-	RssUrls   models.Config
-	Upgrader  = websocket.Upgrader{}
-	Lock      sync.RWMutex
-	MatchList = make([]string, 0)
-	Hash      = make(map[string]int)
-	Fp        = gofeed.NewParser()
+	DbMap         map[string]models.Feed
+	RssUrls       models.Config
+	Upgrader      = websocket.Upgrader{}
+	Lock          sync.RWMutex
+	MatchList     = make([]string, 0)
+	DenyMatchList = make([]string, 0)
+	Hash          = make(map[string]int)
+	Fp            = gofeed.NewParser()
 
 	//go:embed static
 	DirStatic embed.FS
@@ -45,6 +47,10 @@ func Init() {
 
 	for _, keyword := range conf.Keywords {
 		MatchList = append(MatchList, keyword)
+	}
+
+	for _, keyword := range conf.DenyKeywords {
+		DenyMatchList = append(DenyMatchList, keyword)
 	}
 
 	ReadFile(conf.Archives)

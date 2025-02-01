@@ -12,6 +12,9 @@
     "nightEndTime": "19:30:00",
 
     "keywords": ["cc","cloudcone","rn","racknerd","咸鱼","4837","jpp","hk2p"],
+    "denyKeywords":[
+        "^出"
+    ],
     "notify" : {
         "feishu": {
             "api": ""
