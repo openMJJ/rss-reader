@@ -10,6 +10,7 @@ import (
 func MatchStr(str string, callback func(string)) {
 	strFinal := strings.TrimSpace(str)
 	for _, pattern := range globals.MatchList {
+		pattern = "(?i)" + pattern
 		re, err := regexp.Compile(pattern)
 		if err != nil {
 			log.Printf("⚠️ Invalid regular expression: %s, error: %v", pattern, err)
