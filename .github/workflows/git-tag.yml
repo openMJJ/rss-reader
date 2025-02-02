@@ -33,5 +33,5 @@ jobs:
         run: |
           new_tag="${{ steps.current_version.outputs.current_version }}"
           git push origin --delete "$new_tag" || true
-          git tag -f "$new_tag"
+          git tag "$new_tag"
           git push origin "$new_tag"
