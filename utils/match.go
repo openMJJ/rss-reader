@@ -18,7 +18,7 @@ func MatchDenyList(str string) bool {
 func MatchStr(str string, matchList []string) bool {
 	strFinal := strings.TrimSpace(str)
 	for _, pattern := range matchList {
-		pattern = "(?i)" + pattern
+		pattern = "(?i:" + pattern + ")"
 		re, err := regexp.Compile(pattern)
 		if err != nil {
 			log.Printf("⚠️ Invalid regular expression: %s, error: %v", pattern, err)
