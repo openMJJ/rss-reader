@@ -13,7 +13,7 @@
 
     "keywords": ["cc","cloudcone","rn","racknerd","咸鱼","4837","jpp","hk2p"],
     "denyKeywords":[
-        "^出"
+        "^这是排除关键字"
     ],
     "notify" : {
         "feishu": {
