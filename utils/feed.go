@@ -2,12 +2,13 @@ package utils
 
 import (
 	"fmt"
-	"github.com/mmcdole/gofeed"
 	"log"
 	"rss-reader/globals"
 	"rss-reader/models"
 	"strings"
 	"time"
+
+	"github.com/mmcdole/gofeed"
 
 	"github.com/fsnotify/fsnotify"
 )
@@ -148,20 +149,31 @@ func Check(url string, result *gofeed.Feed, v *gofeed.Item) {
 		if fileCacheOk {
 			return
 		}
+
 		// 匹配关键词
-		MatchStr(v.Title, func(msg string) {
-			_, fileCacheOk = globals.Hash[link]
-			if fileCacheOk {
-				return
-			} else {
-				globals.Hash[link] = 1
-				// 发送通知
-				go Notify(Message{
-					Routes:  []string{FeiShuRoute, TelegramRoute},
-					Content: fmt.Sprintf("%s\n%s", msg, v.Link),
-				})
-				globals.WriteFile(globals.RssUrls.Archives, link)
+		allow := MatchAllowList(v.Title)
+
+		if allow {
+			deny := MatchDenyList(v.Title)
+			if !deny {
+				TryNotify(v.Title, link)
 			}
+		}
+	}
+}
+
+func TryNotify(msg string, link string) {
+	fileCacheOk := false
+	_, fileCacheOk = globals.Hash[link]
+	if fileCacheOk {
+		return
+	} else {
+		globals.Hash[link] = 1
+		// 发送通知
+		go Notify(Message{
+			Routes:  []string{FeiShuRoute, TelegramRoute},
+			Content: fmt.Sprintf("%s\n%s", msg, link),
 		})
+		globals.WriteFile(globals.RssUrls.Archives, link)
 	}
 }

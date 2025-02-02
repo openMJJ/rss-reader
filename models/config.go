@@ -25,9 +25,11 @@ type Config struct {
 	NightStartTime string `json:"nightStartTime"`
 	NightEndTime   string `json:"nightEndTime"`
 
-	Keywords []string `json:"keywords"` // 关键词
-	Notify   Notify   `json:"notify"`   // 通知方式
-	Archives string   `json:"archives"` // 通知方式
+	Keywords     []string `json:"keywords"`     // 关键词
+	DenyKeywords []string `json:"denyKeywords"` // 排除关键词
+
+	Notify   Notify `json:"notify"`   // 通知方式
+	Archives string `json:"archives"` // 通知方式
 }
 
 // Notify 通知方式
