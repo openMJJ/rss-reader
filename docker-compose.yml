@@ -2,9 +2,9 @@ version: "3"
 
 services:
   server:
-    image: okhanyu/rss-reader:latest
+    image: zai7lou/rss-reader:latest
     container_name: rss-reader
-    restart: always
+    restart: unless-stopped
     ports:
       - "9898:8080"
     volumes:
