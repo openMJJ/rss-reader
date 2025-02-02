@@ -9,3 +9,4 @@ services:
       - "9898:8080"
     volumes:
       - "$PWD/config.json:/app/config.json"
+      - "$PWD/archives.txt:/app/archives.txt"
