@@ -7,6 +7,10 @@ on:
     branches:
       - main
 
+permissions:
+  contents: write
+  actions: write
+
 jobs:
   tag:
     name: add tag
@@ -24,8 +28,10 @@ jobs:
           echo "current_version=$version" >> $GITHUB_OUTPUT
 
       - name: Tag and push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           new_tag="${{ steps.current_version.outputs.current_version }}"
           git push origin --delete "$new_tag" || true
-          git tag "$new_tag"
+          git tag -f "$new_tag"
           git push origin "$new_tag"
