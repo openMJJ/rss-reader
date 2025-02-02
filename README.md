@@ -20,6 +20,8 @@
 
 - ***在原作者基础上，进行二次开发，增加了识别关键词后，推送通知到飞书和Telegram（2024年6月2日）*** ***注意⚠：docker-compose.yml 中端口默认是9898***
 
+- ***在e二次开发基础上，进行三次开发，使配置的关键字支持正则表达式，优化了性能，并添加了黑名单功能，可以指定排除指定关键字
+
   
 2023年7月28日，进行了界面改版和升级
 
@@ -82,22 +84,10 @@ nightEndTime | 日间结束时间，如 19:30:00
 
 环境要求：Git、Docker、Docker-Compose
 
-克隆项目
+一键脚本：
 
 ```bash
-git clone https://github.com/okhanyu/rss-reader
-```
-
-进入rss-reader文件夹，运行项目
-
-```bash
-docker-compose up -d
-```
-
-国内服务器将Dockerfile中取消下面注释使用 go mod 镜像
-```dockerfile
-#RUN go env -w GO111MODULE=on && \
-#    go env -w GOPROXY=https://goproxy.cn,direct
+git clone https://github.com/RayWangQvQ/rss-reader && cd rss-reader && docker-compose up -d || docker compose up -d
 ```
 
 部署成功后，通过ip+端口号访问
