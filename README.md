@@ -87,7 +87,7 @@ nightEndTime | 日间结束时间，如 19:30:00
 一键脚本：
 
 ```bash
-git clone https://github.com/RayWangQvQ/rss-reader && cd rss-reader && docker-compose up -d || docker compose up -d
+git clone https://github.com/openmjj/rss-reader && cd rss-reader && docker-compose up -d || docker compose up -d
 ```
 
 部署成功后，通过ip+端口号访问
@@ -105,10 +105,10 @@ server {
     gzip on;
     gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript;
     location / {
-        proxy_pass  http://localhost:9898;
+        proxy_pass  http://localhost:19898;
     }
     location /ws {
-        proxy_pass http://localhost:9898/ws;
+        proxy_pass http://localhost:19898/ws;
         proxy_http_version 1.1;
         proxy_set_header Upgrade $http_upgrade;
         proxy_set_header Connection "Upgrade";
