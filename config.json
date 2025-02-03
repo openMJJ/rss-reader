@@ -1,17 +1,21 @@
+  GNU nano 7.2                                                                                              config.json                                                                                                       
 {
     "values": [
         "https://linux.do/latest.rss",
         "https://rss.nodeseek.com",
-        "https://hostloc.com/forum.php?mod=rss&fid=45&auth=389ec3vtQanmEuRoghE%2FpZPWnYCPmvwWgSa7RsfjbQ%2BJpA%2F6y6eHAx%2FKqtmPOg",
+        "https://hostloc.com/forum.php?fid=45&mod=rss",
         "https://v2ex.com/feed/tab/tech.xml",
-        "https://www.dalao.net/feed.htm"
+        "https://www.dalao.net/feed.htm",
+        "http://www.ruanyifeng.com/blog/atom.xml",
+        "https://lowendtalk.com/categories/offers/feed.rss",
+        "https://clochat.com/latest.rss"
     ],
-    "refresh": 5,
+    "refresh": 2,
     "autoUpdatePush": 7,
-    "nightStartTime": "06:30:00",
-    "nightEndTime": "19:30:00",
+    "nightStartTime": "00:00:01",
+    "nightEndTime": "11:59:59",
 
-    "keywords": ["cc","cloudcone","rn","racknerd","咸鱼","4837","jpp","hk2p"],
+    "keywords": ["活动|alice|永久|bestvm|富婆|甲骨文|oracle|(乌?龟(壳)?)|nezha|哪吒|邀请码|限时|免费|free|clash|教育邮箱|edu|esim|虚拟卡|claw|嫖|女票|薅|(羊|大)毛|送|抽奖|抽"],
     "denyKeywords":[
         "^这是排除关键字"
     ],
@@ -21,8 +25,8 @@
         },
         "telegram": {
             "api": "https://api.telegram.org/bot${token}/sendMessage",
-            "chat_id":"",
-            "token": ""
+            "chat_id":"-1002206392468",
+            "token": "7001961054:AAG0bLlkwjg26p0tL1rMRcwrxQ7uMAq3u9g"
         }
     },
     "archives": "archives.txt"
