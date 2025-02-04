@@ -2,12 +2,12 @@
     "values": [
         "https://linux.do/latest.rss",
         "https://rss.nodeseek.com",
-        "https://hostloc.com/forum.php?fid=45&mod=rss",
+        "http://130.162.49.26:41200/telegram/channel/hostloc2tg",
         "https://v2ex.com/feed/tab/tech.xml",
         "https://www.dalao.net/feed.htm",
         "http://www.ruanyifeng.com/blog/atom.xml",
-        "https://lowendtalk.com/categories/offers/feed.rss",
-        "https://clochat.com/latest.rss"
+        "https://lowendtalk.com/discussions/feed.rss",
+        "http://130.162.49.26:41200/telegram/channel/CloChat"
     ],
     "refresh": 2,
     "autoUpdatePush": 7,
@@ -30,3 +30,6 @@
     },
     "archives": "archives.txt"
 }
+
+
+
