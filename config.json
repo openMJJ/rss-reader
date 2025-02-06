@@ -14,7 +14,29 @@
     "nightStartTime": "00:00:01",
     "nightEndTime": "11:59:59",
 
-    "keywords": ["活动|alice|永久|bestvm|富婆|甲骨文|oracle|(乌?龟(壳)?)|nezha|哪吒|邀请码|限时|免费|free|clash|教育邮箱|edu|esim|虚拟卡|claw|嫖|女票|薅|(羊|大)毛|送|抽奖|抽"],
+    "keywords": [
+        "cloudflare",
+        "节点",
+        "订阅",
+        "中奖",
+        "serv00",
+        "活动",
+        "alice",
+        "永久",
+        "bestvm",
+        "富婆",
+        "(甲骨文|oracle|(乌龟壳?))",
+        "(nezha|哪吒)",
+        "邀请码",
+        "限时",
+        "(免费|福利|free)",
+        "(clash|科学上网)",
+        "(教育邮箱|edu)",
+        "(esim|虚拟卡)",
+        "(claw|嫖|女票)",
+        "(薅|(羊毛)|(大毛))",
+        "(送|抽奖|抽)"
+        ],  
     "denyKeywords":[
         "^这是排除关键字"
     ],
