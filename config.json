@@ -2,12 +2,12 @@
     "values": [
         "https://linux.do/latest.rss",
         "https://rss.nodeseek.com",
-        "http://130.162.49.26:41200/telegram/channel/hostloc2tg",
+        "http://93.177.65.104:41200/telegram/channel/hostloc2tg",
         "https://v2ex.com/feed/tab/tech.xml",
         "https://www.dalao.net/feed.htm",
         "http://www.ruanyifeng.com/blog/atom.xml",
         "https://lowendtalk.com/discussions/feed.rss",
-        "http://130.162.49.26:41200/telegram/channel/CloChat"
+        "http://93.177.65.104:41200/telegram/channel/CloChat"
     ],
     "refresh": 2,
     "autoUpdatePush": 7,
